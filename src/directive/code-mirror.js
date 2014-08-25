@@ -18,7 +18,7 @@ angular.module('ng-code-mirror.directive', ['ng-code-mirror.prettify'])
  */
 function codeMirrorDirective(prettify) {
   return {
-    restrict: 'E',
+    restrict: 'EAC',
     compile: function(tElm, tAttr, transcluse) {
 
       //create <pre> root element and bind it prettify class
