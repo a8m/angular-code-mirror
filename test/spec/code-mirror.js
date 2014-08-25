@@ -2,8 +2,7 @@
 
 describe('codeMirrorDirective', function() {
 
-  var scope,
-    element;
+  var element;
 
   //directive compilation
   function compileElm(code) {
