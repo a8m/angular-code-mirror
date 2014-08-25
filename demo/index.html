@@ -1,9 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
-    <title></title>
+    <title>ng-static demo</title>
+    <link rel="stylesheet" href="../src/google-vendor/prettify.css"/>
 </head>
-<body>
+<body ng-controller="MainController">
 
+<div>
+    <textarea ng-model="foo"></textarea>
+    <code-mirror lang="js" model="foo"></code-mirror>
+</div>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../src/google-vendor/prettify.js"></script>
+<script src="../src/common.js"></script>
+<script src="../src/service/prettify.js"></script>
+<script src="../src/directive/code-mirror.js"></script>
+<script src="../src/ng-code-mirror.js"></script>
+
+<script src="demo.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
-/**
- * Created by arielmashraki on 8/25/14.
- */
+angular.module('app', ['ng-code-mirror'])
+  .controller('MainController', function($scope) {
+
+    $scope.foo = 'bar';
+
+  });
