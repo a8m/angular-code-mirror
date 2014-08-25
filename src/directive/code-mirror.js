@@ -1,22 +1,22 @@
 
 /**
  * @ngdoc module
- * @name a8m.code-mirror.directive
+ * @name ng-code-mirror.directive
  *
  * @description
  * angular code mirror directive
  */
-angular.module('a8m.angular-code-mirror.directive', [])
-  .directive('codeMirror', codeMirrorDirective);
+angular.module('ng-code-mirror.directive', ['ng-code-mirror.prettify'])
+  .directive('codeMirror', ['prettify', codeMirrorDirective]);
 
 /**
  * @ngdoc Directive
- * @param prettifyFactory
+ * @param prettify
  * @returns {}
  * @example
  * <code-mirror land="java" model="scope.model"></code-mirror>
  */
-function codeMirrorDirective(prettifyFactory) {
+function codeMirrorDirective(prettify) {
   return {
     restrict: 'E',
     compile: function(tElm, tAttr, transcluse) {
@@ -52,7 +52,7 @@ function codeMirrorDirective(prettifyFactory) {
     scope.$watch(attr.model, function(nVal) {
       if(nVal) {
         codeElm.empty();
-        codeElm.html(prettifyFactory.one(nVal));
+        codeElm.html(prettify.one(nVal));
       }
     });
 
