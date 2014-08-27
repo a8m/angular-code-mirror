@@ -1,6 +1,6 @@
 {
   "name": "angular-code-mirror",
-  "description": "2 way binding code mirror for AngularJS",
+  "description": "2 way binding code mirror for AngularJS based on google-prettify",
   "version": "0.0.1",
   "filename": "angular-code-mirror.min.js",
   "main": "dist/angular-code-mirror.min.js",
@@ -19,7 +19,8 @@
     "browser",
     "code-mirror",
     "prettify",
-    "code highlither"
+    "code highlither",
+    "google-prettify"
   ],
   "dependencies": {},
   "devDependencies": {
@@ -36,7 +37,6 @@
     "grunt-coveralls": "~0.3.0",
     "grunt-karma": "latest",
     "grunt-karma-coveralls": "~2.5.1",
-    "grunt-zip": "*",
     "karma": "~0.12.16",
     "karma-chrome-launcher": "~0.1.2",
     "karma-coverage": "~0.2.4",
