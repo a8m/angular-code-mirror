@@ -29,12 +29,6 @@ module.exports = function(grunt) {
         dest: '<%= dirs.dest %>/<%= pkg.name %>.js'
       }
     },
-    zip: {
-      '<%= dirs.dest %>/angular-filter.zip': [
-        '<%= dirs.dest %>/<%= pkg.name %>.js',
-        '<%= dirs.dest %>/<%= pkg.name %>.min.js'
-      ]
-    },
     bowerInstall: {
       install: {
         options: {
@@ -49,6 +43,16 @@ module.exports = function(grunt) {
       dist: {
         src: ['<%= concat.dist.dest %>'],
         dest: '<%= dirs.dest %>/<%= pkg.name %>.min.js'
+      }
+    },
+    cssmin: {
+      options: {
+        banner: '<%= meta.banner %>'
+      },
+      combine: {
+        files: {
+          '<%= dirs.dest %>/css/<%= pkg.name %>.css': ['src/**/*.css']
+        }
       }
     },
     jshint: {
@@ -115,6 +119,9 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
+  // Load the plugin that provides the "css-min" task
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+
   grunt.loadNpmTasks('grunt-bower-task');
 
   grunt.renameTask('bower', 'bowerInstall');
@@ -123,15 +130,13 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-conventional-changelog');
 
-  grunt.loadNpmTasks('grunt-zip');
-
   grunt.loadNpmTasks('grunt-coveralls');
 
   // Default task.
   grunt.registerTask('default', ['build']);
 
   // Build task.
-  grunt.registerTask('build', ['bowerInstall', 'karma:build', 'karma:buildUnderscore', 'concat', 'uglify', 'zip', 'coveralls']);
+  grunt.registerTask('build', ['bowerInstall', 'karma:build', 'karma:buildUnderscore', 'concat', 'uglify', 'cssmin'/*, 'coveralls'*/]);
 
   grunt.registerTask('test', ['karma:build', 'karma:buildUnderscore']);
 
