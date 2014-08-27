@@ -52,7 +52,10 @@ function codeMirrorDirective(prettify) {
     scope.$watch(attr.model, function(nVal) {
       if(nVal) {
         codeElm.empty();
-        codeElm.html(prettify.one(nVal));
+        //replace all tag chars with their entity
+        codeElm.html(prettify.one(
+          nVal.replace(/</g, '&lt;').replace(/>/g,'&gt;')
+        ));
       }
     });
 
