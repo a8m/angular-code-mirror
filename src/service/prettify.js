@@ -16,20 +16,6 @@ angular.module('ng-code-mirror.prettify', [])
   */
 function prettifyProvider() {
 
-  var theme;
-
-  /**
-   * @ngdoc method
-   * @description
-   * sets different theme to prettify code block
-   * @param themeName
-   * @returns {prettifyProvider}
-   */
-  this.setTheme = function(themeName) {
-    theme = themeName;
-    return this;
-  };
-
   this.$get = ['$window', function($window) {
 
     return {
