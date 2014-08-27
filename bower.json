@@ -1,11 +1,11 @@
 {
-  "name": "angular-filter",
-  "version": "0.4.2",
-  "main": "dist/angular-filter.js",
-  "description": "Bunch of useful filters for angularJS",
+  "name": "angular-code-mirror",
+  "version": "0.0.1",
+  "main": "dist/angular-code-mirror.js",
+  "description": "2 way binding code mirror for AngularJS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/a8m/angular-filter.git"
+    "url": "https://github.com/a8m/angular-code-mirror.git"
   },
   "dependencies": {
     "angular": "*"
