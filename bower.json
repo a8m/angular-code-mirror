@@ -24,9 +24,7 @@
     ".gitignore",
     "README.md",
     "travis.yml",
-    ".bowercc",
-    "**/.*",
-    "tests"
+    ".bowercc"
   ],
   "homepage": "https://github.com/a8m/angular-code-mirror",
   "authors": [
