@@ -1,6 +1,6 @@
 /**
  * 2 way binding code mirror for AngularJS based on google-prettify
- * @version v0.0.1 - 2014-08-27 * @link https://github.com/a8m/angular-code-mirror
+ * @version v0.0.1 - 2014-08-28 * @link https://github.com/a8m/angular-code-mirror
  * @author Ariel Mashraki <ariel@mashraki.co.il>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
