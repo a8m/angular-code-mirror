@@ -1,6 +1,6 @@
 angular-code-mirror
 ===================
->2 way binding code mirror for AngularJS based on google-prettify
+>2 way binding code mirror for AngularJS based on google-prettify,  **v0.0.2**
 
 ##Table of contents:
 - [Get Started](#get-started)
