@@ -17,7 +17,7 @@ angular-code-mirror
 
 **(3)** Include `angular-code-mirror.css` in the `<head>` tag
 
-**(3)** Add `'ng-code-mirror'` to your main module's list of dependencies.
+**(4)** Add `'ng-code-mirror'` to your main module's list of dependencies.
 
 When you're done, your setup should look similar to the following:
 
