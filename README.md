@@ -31,7 +31,7 @@ When you're done, your setup should look similar to the following:
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
     <script src="vendor/angular-code-mirror.min.js"></script>
     <script>
-        var myApp = angular.module('myApp', ['angular.filter']);
+        var myApp = angular.module('myApp', ['ng-code-mirror']);
 
     </script>
     ...
