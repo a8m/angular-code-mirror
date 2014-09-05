@@ -1,5 +1,5 @@
 angular-code-mirror
-===================
+=================== &nbsp; [![Build Status](https://travis-ci.org/a8m/angular-code-mirror.svg?branch=master)](https://travis-ci.org/a8m/angular-code-mirror)
 >2 way binding code mirror for AngularJS based on google-prettify,  **v0.0.2**
 
 ##Table of contents:
