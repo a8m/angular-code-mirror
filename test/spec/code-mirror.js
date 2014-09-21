@@ -54,34 +54,34 @@ describe('codeMirrorDirective', function() {
   //linkFn handle
   describe('linkFn handle', function() {
 
-//    it('should call pretty.one function every changing', inject(
-//      compileElm('<code-mirror model="code.text"></code-mirror>'),
-//      function($rootScope, prettify) {
-//
-//        var pSpy = spyOn(prettify, 'one'),
-//          str = 'ABCDEFGHIJ'.split('');
-//
-//        $rootScope.code = { text: '' };
-//
-//        str.forEach(function(i) {
-//          $rootScope.code.text = i;
-//          $rootScope.$digest();
-//          expect(pSpy).toHaveBeenCalledWith(i, '', false);
-//        });
-//      }
-//    ));
-//
-//    it('should call pretty.one with lang and line numbes as true if set', inject(
-//      compileElm('<code-mirror model="code.text" line-numbers="true" lang="js"></code-mirror>'),
-//      function($rootScope, prettify) {
-//
-//        var pSpy = spyOn(prettify, 'one');
-//
-//        $rootScope.code = { text: 'My Text' };
-//        $rootScope.$digest();
-//        expect(pSpy).toHaveBeenCalledWith('My Text', 'js', true);
-//      }
-//    ));
+    it('should call pretty.one function every changing', inject(
+      compileElm('<code-mirror model="code.text"></code-mirror>'),
+      function($rootScope, prettify) {
+
+        var pSpy = spyOn(prettify, 'one'),
+          str = 'ABCDEFGHIJ'.split('');
+
+        $rootScope.code = { text: '' };
+
+        str.forEach(function(i) {
+          $rootScope.code.text = i;
+          $rootScope.$digest();
+          expect(pSpy).toHaveBeenCalledWith(i, '', false);
+        });
+      }
+    ));
+
+    it('should call pretty.one with lang and line numbes as true if set', inject(
+      compileElm('<code-mirror model="code.text" line-numbers="true" lang="js"></code-mirror>'),
+      function($rootScope, prettify) {
+
+        var pSpy = spyOn(prettify, 'one');
+
+        $rootScope.code = { text: 'My Text' };
+        $rootScope.$digest();
+        expect(pSpy).toHaveBeenCalledWith('My Text', 'js', true);
+      }
+    ));
 
     it('should replace element content every changing', inject(
       compileElm('<code-mirror model="js"></code-mirror>'),
