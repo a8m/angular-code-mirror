@@ -44,8 +44,5 @@
     "karma-jasmine": "~0.1.5",
     "karma-phantomjs-launcher": "~0.1.4"
   },
-  "scripts": {
-    "test": "" /*"grunt test --verbose"*/
-  },
   "license": "MIT"
 }
