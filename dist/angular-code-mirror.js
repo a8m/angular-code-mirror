@@ -1,6 +1,6 @@
 /**
  * 2 way binding code mirror for AngularJS based on google-prettify
- * @version v0.0.1 - 2014-08-28 * @link https://github.com/a8m/angular-code-mirror
+ * @version v0.0.3 - 2014-09-21 * @link https://github.com/a8m/angular-code-mirror
  * @author Ariel Mashraki <ariel@mashraki.co.il>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -72,13 +72,17 @@ function codeMirrorDirective(prettify) {
 
     //find <code> block
     var codeElm = elm.find('code');
+    //determine if to add line numbers or not
+    var lineNumbers = scope.$eval(attr.lineNumbers) || false;
 
     scope.$watch(attr.model, function(nVal) {
       if(nVal) {
         codeElm.empty();
         //replace all tag chars with their entity
         codeElm.html(prettify.one(
-          nVal.replace(/</g, '&lt;').replace(/>/g,'&gt;')
+          nVal.replace(/</g, '&lt;').replace(/>/g,'&gt;'),
+          attr.lang || '',
+          lineNumbers
         ));
       }
     });

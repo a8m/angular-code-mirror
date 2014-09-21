@@ -1,6 +1,6 @@
 {
   "name": "angular-code-mirror",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/angular-code-mirror.js",
   "description": "2 way binding code mirror for AngularJS",
   "repository": {

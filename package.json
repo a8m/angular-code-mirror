@@ -1,7 +1,7 @@
 {
   "name": "angular-code-mirror",
   "description": "2 way binding code mirror for AngularJS based on google-prettify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "filename": "angular-code-mirror.min.js",
   "main": "dist/angular-code-mirror.min.js",
   "homepage": "https://github.com/a8m/angular-code-mirror",
