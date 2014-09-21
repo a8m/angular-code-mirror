@@ -66,8 +66,20 @@ describe('codeMirrorDirective', function() {
         str.forEach(function(i) {
           $rootScope.code.text = i;
           $rootScope.$digest();
-          expect(pSpy).toHaveBeenCalledWith(i);
+          expect(pSpy).toHaveBeenCalledWith(i, '', false);
         });
+      }
+    ));
+
+    it('should call pretty.one with lang and line numbes as true if set', inject(
+      compileElm('<code-mirror model="code.text" line-numbers="true" lang="js"></code-mirror>'),
+      function($rootScope, prettify) {
+
+        var pSpy = spyOn(prettify, 'one');
+
+        $rootScope.code = { text: 'My Text' };
+        $rootScope.$digest();
+        expect(pSpy).toHaveBeenCalledWith('My Text', 'js', true);
       }
     ));
 
