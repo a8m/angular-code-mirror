@@ -41,17 +41,33 @@
     <div class="container">
         <table class="table default-example">
             <thead>
+            <tr>
+                <td>Example with line numbers:</td>
+            </tr>
+            </thead>
+            <tr>
+                <td>
+                    <textarea  class="form-control" rows="20" ng-model="code1">
+                    </textarea>
+                </td>
+                <td>
+                    <code-mirror lang="js" model="code1" line-numbers="true"></code-mirror>
+                </td>
+            </tr>
+        </table>
+        <table class="table default-example">
+            <thead>
                 <tr>
                     <td>Default theme:</td>
                 </tr>
             </thead>
             <tr>
                 <td>
-                    <textarea  class="form-control" rows="20" ng-model="code">
+                    <textarea  class="form-control" rows="20" ng-model="code2">
                     </textarea>
                 </td>
                 <td>
-                    <code-mirror lang="js" model="code"></code-mirror>
+                    <code-mirror lang="js" model="code2"></code-mirror>
                 </td>
             </tr>
         </table>
