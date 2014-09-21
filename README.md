@@ -1,5 +1,5 @@
 #angular-code-mirror &nbsp; [![Build Status](https://travis-ci.org/a8m/angular-code-mirror.svg?branch=master)](https://travis-ci.org/a8m/angular-code-mirror)
->2 way binding code mirror for AngularJS based on google-prettify,  **v0.0.2**
+>2 way binding code mirror for AngularJS based on google-prettify,  **v0.0.3**
 
 ##Table of contents:
 - [Get Started](#get-started)
@@ -50,6 +50,9 @@ Example:
   
   <!--select language and bind the model to the code-mirror directive-->
   <code-mirror lang="js" model="code"></code-mirror>
+  
+    <!--codemirror with line numbers-->
+  <code-mirror lang="js" model="code" line-numbers="true"></code-mirror>
  ...
 </body>
 ```
