@@ -48,13 +48,17 @@ function codeMirrorDirective(prettify) {
 
     //find <code> block
     var codeElm = elm.find('code');
+    //determine if to add line numbers or not
+    var lineNumbers = scope.$eval(attr.lineNumbers) || false;
 
     scope.$watch(attr.model, function(nVal) {
       if(nVal) {
         codeElm.empty();
         //replace all tag chars with their entity
         codeElm.html(prettify.one(
-          nVal.replace(/</g, '&lt;').replace(/>/g,'&gt;')
+          nVal.replace(/</g, '&lt;').replace(/>/g,'&gt;'),
+          attr.lang || '',
+          lineNumbers
         ));
       }
     });
