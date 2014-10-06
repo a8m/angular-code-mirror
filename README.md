@@ -1,4 +1,4 @@
-#angular-code-mirror &nbsp; [![Build Status](https://travis-ci.org/a8m/angular-code-mirror.svg?branch=master)](https://travis-ci.org/a8m/angular-code-mirror)
+#angular-code-mirror &nbsp; [![Build Status](https://travis-ci.org/a8m/angular-code-mirror.svg?branch=master)](https://travis-ci.org/a8m/angular-code-mirror) [![Coverage Status](https://coveralls.io/repos/a8m/angular-code-mirror/badge.png?branch=master)](https://coveralls.io/r/a8m/angular-code-mirror?branch=master)
 >2 way binding code mirror for AngularJS based on google-prettify,  **v0.0.3**
 
 ##Table of contents:
