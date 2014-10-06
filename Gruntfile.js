@@ -136,7 +136,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['build']);
 
   // Build task.
-  grunt.registerTask('build', ['bowerInstall', 'karma:build', 'karma:buildUnderscore', 'concat', 'uglify', 'cssmin'/*, 'coveralls'*/]);
+  grunt.registerTask('build', ['bowerInstall', 'karma:build', 'karma:buildUnderscore', 'concat', 'uglify', 'cssmin', 'coveralls']);
 
   grunt.registerTask('test', ['karma:build', 'karma:buildUnderscore']);
 
