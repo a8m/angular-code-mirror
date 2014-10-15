@@ -62,18 +62,18 @@ Example:
 
 #Development
 Clone the project: <br/>
-```
+```sh
 $ git clone 
 $ npm install
 $ bower install
 ```
 Run the tests:
-```
+```sh
 $ grunt test
 ```
 **Deploy:**<br/>
 Run the build task, update version before(bower,package)
-```
+```sh
 $ grunt build
 $ git tag v0.*.*
 $ git push origin master --tags
